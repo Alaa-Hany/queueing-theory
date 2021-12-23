@@ -1,0 +1,50 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<AnchorPane fx:controller="com.alaa.queueing_theory.app.controllers.DeterministicController" fx:id="deterministicView"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <children>
+        <GridPane prefWidth="670.0" layoutX="15.0" layoutY="30.0" vgap="20" hgap="10" >
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label text="Enter Mu :" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <Label text="Enter Time :" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <Label text="Enter k :"  GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <Label text="Enter Lamda :" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                <Label text="Enter customer no :" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <Label text="Enter init no of customers :" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                <TextField fx:id="mu" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <TextField fx:id="time" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <TextField fx:id="k"  GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <TextField fx:id="lamda" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+                <TextField fx:id="customerNumber"   GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                <TextField fx:id="initNoOfCustomer" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+            </children>
+        </GridPane>
+        <HBox layoutY="240.0" prefHeight="40.0" prefWidth="650" alignment="CENTER" spacing="20.0">
+            <children>
+                <Button styleClass="primary-btn" fx:id="btnBack" onAction="#showEntry" mnemonicParsing="false"
+                        text="Back"/>
+                <Button styleClass="primary-btn" fx:id="btnCalcNt" onAction="#calculateNoOfCustomerAtTime" mnemonicParsing="false"
+                        text="Calculate n(t)"/>
+                <Button styleClass="primary-btn" fx:id="btnCalcWq" onAction="#calculateWaitingTimeForCustomer" mnemonicParsing="false" text="Calculate Wq(n)"/>
+                <Button styleClass="primary-btn" fx:id="btnPlot"  onAction="#plot"  mnemonicParsing="false"   text="Plot"/>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

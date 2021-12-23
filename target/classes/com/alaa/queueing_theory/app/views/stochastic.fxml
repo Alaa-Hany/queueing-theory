@@ -1,0 +1,51 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<AnchorPane fx:controller="com.alaa.queueing_theory.app.controllers.StochasticController" fx:id="stochasticView"
+            xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <children>
+        <GridPane prefWidth="670.0" layoutX="15.0" layoutY="30.0" vgap="20" hgap="10">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label text="Enter Mu :" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <Label text="Enter C :" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <Label text="Enter Lamda :" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                <Label text="Enter k :" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <TextField fx:id="mu" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <TextField fx:id="c" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <TextField fx:id="lamda" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+                <TextField fx:id="k" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+
+            </children>
+        </GridPane>
+        <HBox layoutY="240.0" prefHeight="40.0" prefWidth="650" alignment="CENTER" spacing="20.0">
+            <children>
+                <Button styleClass="primary-btn" fx:id="btnBack" onAction="#showEntry" mnemonicParsing="false"
+                        text="Back"/>
+                <Button styleClass="primary-btn" fx:id="btnCalcL" onAction="#calcL" mnemonicParsing="false"
+                        text="Calc L"/>
+                <Button styleClass="primary-btn" fx:id="btnCalcLq" onAction="#calcLq" mnemonicParsing="false"
+                        text="Calc Lq"/>
+                <Button styleClass="primary-btn" fx:id="btnCalcW" onAction="#calcW" mnemonicParsing="false"
+                        text="Calc W"/>
+                <Button styleClass="primary-btn" fx:id="btnCalcWq" onAction="#calcWq" mnemonicParsing="false"
+                        text="Calc Wq"/>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

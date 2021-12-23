@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:id="entry"
+      fx:controller="com.alaa.queueing_theory.app.controllers.EntryController"
+      alignment="center"
+      spacing="50"
+         >
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+
+    <Label styleClass="select-title" GridPane.columnSpan="2"    >
+         Please Select Queue Type
+    </Label>
+
+    <HBox  prefHeight="40.0" prefWidth="650" alignment="CENTER" spacing="50.0">
+
+        <children>
+            <Button prefHeight="50" minWidth="100" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                    fx:id="btnDisplayDeterministic"
+                    onAction="#showDeterministicForm"
+            />
+            <Button prefHeight="50" minWidth="100" GridPane.rowIndex="1" GridPane.columnIndex="1"
+                    fx:id="btnDisplayStochastic"
+                    onAction="#showStochasticForm"
+            />
+        </children>
+    </HBox>
+
+</VBox>

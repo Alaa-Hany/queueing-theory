@@ -1,0 +1,65 @@
+.root {
+    -fx-background-color: #6E85B2;
+}
+
+
+
+#labelAppTitle , #labelCodeBy{
+    -fx-background-color: #5C527F;
+    -fx-font-size: 30px;
+    -fx-pref-height: 50px ;
+    -fx-text-fill: #261C2C ;
+    -fx-alignment: center;
+    -fx-pref-width: Infinity;
+    -fx-font-weight : bold;
+
+}
+#labelCodeBy {
+    -fx-font-size: 20px;
+    -fx-pref-height: 40px ;
+    -fx-font-weight : bold;
+}
+.label {
+    -fx-font-size: 13px;
+    -fx-font-weight : bold;
+
+    -fx-text-fill: #261C2C ;
+
+}
+.text-field {
+    -fx-font-size: 12px;
+    -fx-font-weight : bold;
+    -fx-text-fill: #3E2C41 ;
+}
+
+.button {
+    -fx-font-size: 20px;
+    -fx-font-weight : bold;
+    -fx-background-radius: 30;
+    -fx-background-color: linear-gradient(#261C2C , #3E2C41) ;
+    -fx-text-fill: #6E85B2;
+    -fx-effect: dropshadow( gaussian , #261C2C , 0,0,0,2 );
+}
+.button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: linear-gradient(  #3E2C41 , #261C2C) ;
+    -fx-text-fill: #6E85b0;
+
+}
+
+.button:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+.primary-btn{
+    -fx-font-size: 17px;
+}
+
+.select-title {
+    -fx-text-fill: #261C2C ;
+    -fx-alignment: center;
+    -fx-font-size: 20px;
+    -fx-font-weight : bold;
+
+}
